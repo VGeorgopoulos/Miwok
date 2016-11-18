@@ -12,8 +12,18 @@ public class Word {
      * It contains a default translation and a Miwok translation for the word.
      */
 
+    /**
+     * Default translation for the word
+     */
     private String mDefaultTranslation;
+    /**
+     * Miwok translation for the word
+     */
     private String mMiwokTranslation;
+    /**
+     * Audio resource ID for the word
+     */
+    private int mAudioResourceId;
 
     /**
      * Image resource ID for the word
@@ -29,9 +39,10 @@ public class Word {
      * @param miwokTranslation
      * @param defaultTranslation
      */
-    public Word(String miwokTranslation, String defaultTranslation) {
+    public Word(String miwokTranslation, String defaultTranslation, int audioResourceId) {
         mMiwokTranslation = miwokTranslation;
         mDefaultTranslation = defaultTranslation;
+        mAudioResourceId = audioResourceId;
     }
 
     /**
@@ -39,22 +50,38 @@ public class Word {
      * @param miwokTranslation   Parameter for the Miwok language
      * @param defaultTranslation
      */
-    public Word(String miwokTranslation, String defaultTranslation, int imageResourceId) {
+    public Word(String miwokTranslation, String defaultTranslation, int imageResourceId, int audioResourceId) {
         mMiwokTranslation = miwokTranslation;
         mDefaultTranslation = defaultTranslation;
         mImageResourceId = imageResourceId;
+        mAudioResourceId = audioResourceId;
     }
 
+    /**
+     * @return The Audio resourse id of the word.
+     */
+    public int getAudioResourceId() {
+        return mAudioResourceId;
+    }
 
+    /**
+     * @return The image Resource ID of the word.
+     */
     public int getImageResourceId() {
         return mImageResourceId;
     }
 
+    /**
+     * @return The miwok translation of the word
+     */
     public String getMiwokTranslation() {
 
         return mMiwokTranslation;
     }
 
+    /**
+     * @return The default translation for the word
+     */
     public String getDefaultTranslation() {
         return mDefaultTranslation;
     }
