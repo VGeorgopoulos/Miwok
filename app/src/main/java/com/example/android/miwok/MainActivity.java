@@ -82,8 +82,8 @@ public class MainActivity extends AppCompatActivity {
         phraces.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Create a new intent to open the PhracesActivity
-                Intent phracesIntent = new Intent(MainActivity.this, PhracesActivity.class);
+                //Create a new intent to open the PhrasesActivity
+                Intent phracesIntent = new Intent(MainActivity.this, PhrasesActivity.class);
 
                 //Start the new activity
                 startActivity(phracesIntent);
